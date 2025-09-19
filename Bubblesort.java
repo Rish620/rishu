@@ -1,0 +1,35 @@
+package placement_questions;
+
+import java.util.Scanner;
+
+public class Bubblesort {
+
+	public static void main(String[] args) {
+		System.out.println("enter the number");
+		Scanner sc = new Scanner(System.in);
+		int n= sc.nextInt();
+		int arr[]= new int[n+1];
+		int temp=0;
+		for(int i=0; i<n; i++)
+		{
+			arr[i]=sc.nextInt();
+		}
+         for(int i=0; i<n; i++)
+         {
+        	 for(int j=0; j<n-1; j++)
+        	 {
+        		 if(arr[j]<arr[j+1])
+        		 {
+        			 temp=arr[j];
+        			 arr[j]=arr[j+1];
+        			 arr[j+1]=temp;
+        		 }
+        	 }
+         }
+         for(int i=0; i<n; i++)
+         {
+        	 System.out.println("arrays after sorting"+arr[i]);
+         }
+	}
+
+}
